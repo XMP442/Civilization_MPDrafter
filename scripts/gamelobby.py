@@ -109,7 +109,7 @@ class GameLobby:
     def ban_default(self):
         self.remove_civ("Huns")
         self.remove_civ("Venice")
-        return "Spain, Huns, and Venice are automatically banned."
+        return "Huns and Venice are automatically banned."
 
     def ban_civ(self, player, civ):
         # Check if player is registered first.
