@@ -203,7 +203,7 @@ async def tierfromciv(ctx: discord.ApplicationContext, civ: str):
 @option(name="civ", description="Which tier are you looking for?",
     autocomplete=discord.utils.basic_autocomplete(ac_tier_searcher))
 async def civsfromtier(ctx: discord.ApplicationContext, civ: str):
-    await ctx.respond(gamedata.info_cft(civ))
+    await ctx.respond(gamedata.info_cft(civ)) 
 
 @reference.command(name="tiers", description="Print a list civilizations according to tiers.")
 async def learn_tiers(ctx: discord.ApplicationContext):

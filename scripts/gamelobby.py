@@ -107,7 +107,6 @@ class GameLobby:
 
     #region BANS
     def ban_default(self):
-        self.remove_civ("Spain")
         self.remove_civ("Huns")
         self.remove_civ("Venice")
         return "Spain, Huns, and Venice are automatically banned."
@@ -169,6 +168,7 @@ class GameLobby:
             if (not bans):
                 bans = "None."
             text = f"\nPlayer {order} - {player}: {bans}"
+            order += 1
             results += text
         return results
 
@@ -178,7 +178,9 @@ class GameLobby:
         for player in self._players.keys():
             picks = ', '.join(self._players[player]["picks"])
             text = f"\nPlayer {order} - {player}: {picks}"
-            results += text + "\nRemember, nuclear is the answer."
+            results += text
+            order += 1
+        results += "\nRemember, nuclear is the answer."
         return results
     #endregion 
 #endregion 
